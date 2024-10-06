@@ -1,17 +1,21 @@
 import React from 'react'
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card'
-import { Button } from '@nextui-org/button'
 import { Divider } from '@nextui-org/divider'
 import { Image } from '@nextui-org/image'
 import { data } from '@/data/data'
 import clsx from 'clsx'
+import { cn } from '@/utils/utils'
 
-export const CardWord = () => {
-	const bool = true
+interface CardWordProperties {
+	bool: boolean
+}
+
+export const CardWord = ({ bool }: CardWordProperties) => {
+	// const bool = false
 
 	if (bool) {
 		return (
-			<Card isFooterBlurred radius="lg" className="border-none">
+			<Card isFooterBlurred radius="lg" className="border w-72 h-96">
 				<Image
 					alt="Woman listing to music"
 					className="object-cover"
@@ -28,7 +32,7 @@ export const CardWord = () => {
 		)
 	}
 	return (
-		<Card isFooterBlurred radius="lg" className="border-none max-w-[400px]">
+		<Card isFooterBlurred radius="lg" className="border w-72 h-96">
 			<CardBody className="flex items-center justify-center gap-4 p-4">
 				<p className={clsx('text-3xl font-bold', data[0].wordClass)}>
 					{data[0].wordRu}
