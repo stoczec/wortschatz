@@ -7,13 +7,11 @@ import clsx from 'clsx'
 import { cn } from '@/utils/utils'
 
 interface CardWordProperties {
-	bool: boolean
+	isFlipped: boolean
 }
 
-export const CardWord = ({ bool }: CardWordProperties) => {
-	// const bool = false
-
-	if (bool) {
+export const CardWord = ({ isFlipped }: CardWordProperties) => {
+	if (!isFlipped) {
 		return (
 			<Card isFooterBlurred radius="lg" className="border w-72 h-96">
 				<Image
