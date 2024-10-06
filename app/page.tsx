@@ -5,7 +5,7 @@ import { data } from '@/data/data'
 
 export default function Home() {
 	return (
-		<section className="flex items-center justify-center gap-4 ">
+		<section className="flex flex-wrap items-center justify-center gap-4 ">
 			{data.map(card => (
 				<CardWord key={card.id} data={card} />
 			))}

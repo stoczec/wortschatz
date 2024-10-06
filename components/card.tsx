@@ -28,7 +28,13 @@ export const CardWord = ({ data }: CardWordProperties) => {
 	}
 
 	const getFontSizeClass = (word: string) => {
-		return word.length > 15 ? 'text-3xl' : 'text-4xl'
+		if (word.length < 15) {
+			return 'text-4xl'
+		} else if (word.length <= 20) {
+			return 'text-3xl'
+		} else {
+			return 'text-2xl'
+		}
 	}
 
 	return (
