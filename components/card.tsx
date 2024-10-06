@@ -56,8 +56,16 @@ export const CardWord = ({ data }: CardWordProperties) => {
 								'font-bold text-balance text-center',
 								{
 									'text-blue-500': wordClass === WordClasses.MASCULIN,
-								},
-								color
+									'text-red-500': wordClass === WordClasses.FEMININ,
+									'text-green-500': wordClass === WordClasses.NEUTRAL,
+									'text-yellow-500': wordClass === WordClasses.PLURAL,
+									'text-orange-500': wordClass === WordClasses.VERB,
+									'text-purple-500': wordClass === WordClasses.ADJEKTIV,
+									'text-pink-500': wordClass === WordClasses.ADVERB,
+									'text-gray-500': wordClass === WordClasses.PRÄPOSITION,
+									'text-amber-950': wordClass === WordClasses.KONJUNKTION,
+									'text-teal-500': wordClass === WordClasses.PARTIKEL,
+								}
 							)}
 							initial={{ y: -100 }}
 							animate={{ y: 0 }}
