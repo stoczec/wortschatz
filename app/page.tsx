@@ -9,21 +9,14 @@ import { siteConfig } from '@/config/site'
 import { title, subtitle } from '@/components/primitives'
 import { GithubIcon } from '@/components/icons'
 import { CardWord } from '@/components/card'
-import { useState } from 'react'
 import { data } from '@/data/data'
 
-
 export default function Home() {
-	const [isFlipped, setIsFlipped] = useState(false)
-	const handleFlipp = () => {
-		setIsFlipped(!isFlipped)
-	}
-
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 ">
-			<div onClick={handleFlipp} className="cursor-pointer">
-				<CardWord isFlipped={isFlipped} data={data}/>
-			</div>
+		<section className="flex items-center justify-center gap-4 ">
+			{data.map(card => (
+				<CardWord key={card.id} data={card} />
+			))}
 		</section>
 	)
 }
