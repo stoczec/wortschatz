@@ -15,11 +15,11 @@ export const CardWord = ({ isFlipped }: CardWordProperties) => {
 		return (
 			<Card isFooterBlurred radius="lg" className="border w-72 h-96">
 				<Image
-					alt="Woman listing to music"
-					className="object-cover"
-					height={300}
 					src="/images/1.jpg"
+					alt={data[0].wordDe}
 					width={300}
+					height={384}
+					className="object-cover"
 				/>
 				<CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
 					<p className={clsx('text-3xl font-bold', data[0].wordClass)}>
