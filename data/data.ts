@@ -53,7 +53,7 @@ export const data: LanguageCard[] = [
 	{
 		id: 1,
 		wordDe: 'die Manie, -n',
-		wordRu: 'Мания, -и',
+		wordRu: 'Мания',
 		wordClass: WordClasses.FEMININ,
 		exampleDe: 'Er hat starke Manie',
 		exampleRu: 'У него сильная мания',
@@ -62,7 +62,7 @@ export const data: LanguageCard[] = [
 	{
 		id: 2,
 		wordDe: 'die Sucht, -e',
-		wordRu: 'Зависимость, -и',
+		wordRu: 'Зависимость',
 		wordClass: WordClasses.FEMININ,
 		exampleDe: '',
 		exampleRu: '',
