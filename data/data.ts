@@ -1,4 +1,4 @@
-interface LanguageCard {
+export interface LanguageCard {
 	id: number
 	wordDe: string
 	wordRu: string

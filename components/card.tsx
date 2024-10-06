@@ -2,15 +2,16 @@ import React from 'react'
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card'
 import { Divider } from '@nextui-org/divider'
 import { Image } from '@nextui-org/image'
-import { data } from '@/data/data'
 import clsx from 'clsx'
 import { cn } from '@/utils/utils'
+import { LanguageCard } from '@/data/data'
 
 interface CardWordProperties {
 	isFlipped: boolean
+	data: LanguageCard[]
 }
 
-export const CardWord = ({ isFlipped }: CardWordProperties) => {
+export const CardWord = ({ isFlipped, data }: CardWordProperties) => {
 	if (!isFlipped) {
 		return (
 			<Card isFooterBlurred radius="lg" className="border w-72 h-96">

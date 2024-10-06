@@ -10,6 +10,8 @@ import { title, subtitle } from '@/components/primitives'
 import { GithubIcon } from '@/components/icons'
 import { CardWord } from '@/components/card'
 import { useState } from 'react'
+import { data } from '@/data/data'
+
 
 export default function Home() {
 	const [isFlipped, setIsFlipped] = useState(false)
@@ -20,7 +22,7 @@ export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 ">
 			<div onClick={handleFlipp} className="cursor-pointer">
-				<CardWord isFlipped={isFlipped} />
+				<CardWord isFlipped={isFlipped} data={data}/>
 			</div>
 		</section>
 	)
