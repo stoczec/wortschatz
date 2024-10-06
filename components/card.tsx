@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import { LanguageCard } from '@/interfaces/interfaces'
 import { getClassByWordClass } from '@/utils/utils'
+import { WordClasses } from '@/enums/enums'
 
 interface CardWordProperties {
 	data: LanguageCard
@@ -47,12 +48,15 @@ export const CardWord = ({ data }: CardWordProperties) => {
 					height={384}
 					className="object-cover"
 				/>
-				<CardFooter className="absolute bottom-0 z-10 justify-center w-full overflow-hidden before:bg-white/10 border-white/20 border-1 before:rounded-xl rounded-large shadow-small">
+				<CardFooter className="!absolute bottom-0 z-10 justify-center w-full overflow-hidden before:bg-white/10 border-white/20 border-1 before:rounded-xl rounded-large shadow-small">
 					{!isFlipped ? (
 						<motion.p
 							className={clsx(
 								getFontSizeClass(wordDe),
 								'font-bold text-balance text-center',
+								{
+									'text-blue-500': wordClass === WordClasses.MASCULIN,
+								},
 								color
 							)}
 							initial={{ y: -100 }}
