@@ -40,7 +40,11 @@ export const CardWord = ({ data }: CardWordProperties) => {
 
 	return (
 		<div onClick={handleFlipCard} className="cursor-pointer">
-			<Card isFooterBlurred radius="lg" className="border w-72 h-96">
+			<Card
+				isFooterBlurred
+				radius="lg"
+				className="border-2 border-gray-700 w-72 h-96"
+			>
 				<Image
 					src={`/images/${id}.jpg`}
 					alt={wordDe}
@@ -48,7 +52,7 @@ export const CardWord = ({ data }: CardWordProperties) => {
 					height={384}
 					className="object-cover"
 				/>
-				<CardFooter className="absolute bottom-0 z-10 justify-center w-full overflow-hidden before:bg-white/10 border-white/20 border-1 before:rounded-xl rounded-large shadow-small  backdrop-brightness-50">
+				<CardFooter className="absolute bottom-0 z-10 justify-center w-full overflow-hidden before:bg-white/10 before:rounded-xl  shadow-small  backdrop-brightness-50">
 					{!isFlipped ? (
 						<motion.p
 							className={clsx(
@@ -76,7 +80,9 @@ export const CardWord = ({ data }: CardWordProperties) => {
 					) : (
 						<div className="flex flex-col items-center justify-center gap-2">
 							<motion.p
-								className={clsx('text-xl font-bold text-balance text-center')}
+								className={clsx(
+									'text-xl font-bold text-balance text-center text-gray-300'
+								)}
 								initial={{ x: -100 }}
 								animate={{ x: 0 }}
 								transition={animationTransitionConfig}
@@ -92,7 +98,9 @@ export const CardWord = ({ data }: CardWordProperties) => {
 								<Divider className="h-1 rounded-large" />
 							</motion.div>
 							<motion.p
-								className={clsx('text-xl font-bold text-balance text-center')}
+								className={clsx(
+									'text-xl font-bold text-balance text-center text-gray-300'
+								)}
 								initial={{ x: 100 }}
 								animate={{ x: 0 }}
 								transition={animationTransitionConfig}
@@ -122,6 +130,7 @@ export const CardWord = ({ data }: CardWordProperties) => {
 						</div>
 					)}
 				</CardFooter>
+				Car
 			</Card>
 		</div>
 	)
