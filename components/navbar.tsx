@@ -25,6 +25,7 @@ import {
 	SearchIcon,
 	Logo,
 } from '@/components/icons'
+import Image from 'next/image'
 
 export const Navbar = () => {
 	const searchInput = (
@@ -53,7 +54,7 @@ export const Navbar = () => {
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex items-center justify-start gap-1" href="/">
-						<Logo />
+						<Image src="/favicon.ico" alt="Logo" width={60} height={60} />
 						<p className="font-bold text-inherit">Wortschatz</p>
 					</NextLink>
 				</NavbarBrand>
