@@ -48,7 +48,7 @@ export const CardWord = ({ data }: CardWordProperties) => {
 					height={384}
 					className="object-cover"
 				/>
-				<CardFooter className="!absolute bottom-0 z-10 justify-center w-full overflow-hidden before:bg-white/10 border-white/20 border-1 before:rounded-xl rounded-large shadow-small">
+				<CardFooter className="absolute bottom-0 z-10 justify-center w-full overflow-hidden before:bg-white/10 border-white/20 border-1 before:rounded-xl rounded-large shadow-small  backdrop-brightness-50">
 					{!isFlipped ? (
 						<motion.p
 							className={clsx(
